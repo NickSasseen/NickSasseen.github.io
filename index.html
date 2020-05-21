@@ -35,7 +35,7 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input id="txtPassword" class="form-control mr-sm-2" type="password"
+        <input id="txtPassword" class="form-control mr-sm-2 col-12 mb-2" type="password"
           placeholder="Enter the password for the answers" aria-label="Enter the password for the answers">
         <button id="btnPassword" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Enter</button>
       </form>
@@ -82,8 +82,10 @@
         });
       });
 
-      $('#btnPassword').click(function () {
-        if ($('#txtPassword').val().toLower() == password) {
+      $('#btnPassword').click(function (e) {
+        e.preventDefault();
+        
+        if ($('#txtPassword').val() == password) {
           console.log('you got the password');
         }
         else {
