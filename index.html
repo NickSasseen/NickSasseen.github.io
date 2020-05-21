@@ -15,6 +15,10 @@
   <link rel="stylesheet" type="text/css" href="slick-theme.css" />
 
   <style>
+    body {
+      background-color: black;
+    }
+    
     @font-face {
       font-family: Murderer;
       src: url('Youmurdererbb-pwoK.otf') format('opentype');
@@ -175,7 +179,7 @@
       function loadClues() {
         for (var clue of ricks.clues) {
           console.log(clue.hint);
-          $('.rick.slider').append('<div>' + clue.hint + '</div>');
+          $('.rick.slider').append('<div class="">' + clue.hint + '</div>');
         }
       }
 
