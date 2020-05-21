@@ -67,9 +67,9 @@ $(document).ready(function () {
 
         $('#gameInstructions').hide();
         if (whosThere == 'Mom') {
-            $('.mom.slider').show();
+            $('.mom').show();
         } else {
-            $('.rick.slider').show();
+            $('.rick').show();
         }
     });
 
