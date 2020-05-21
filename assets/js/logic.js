@@ -16,12 +16,8 @@ $(document).ready(function () {
     var password = 'supersecretpassword';
     $('.whos-there').click(function () {
         var whosThere = $(this).html();
-        $(this).removeClass('text-white').addClass('text-danger');
-        $('.whos-there').filter(function () {
-            return $(this).html() != whosThere;
-        }).removeClass('text-danger').addClass('text-white');
-
-        $('#navMenu').collapse('hide')
+    
+        $('#navbarMenu').collapse('hide')
 
         $('#instructions').fadeOut(2000, function () {
             $('#hello').html('Hello, ' + whosThere);
