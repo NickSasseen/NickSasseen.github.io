@@ -146,10 +146,14 @@
 
       function loadClues() {
         // populate sliders
-        var clues = require('./clues.json');
-        console.log(clues);
-
-
+        $.getJSON('clues.json', function () { console.log('got em\''); })
+          .done(function () { console.log('done'); })
+          .fail(function () {
+            console.log("error");
+          })
+          .always(function () {
+            console.log("complete");
+          });
       }
 
       loadClues();
