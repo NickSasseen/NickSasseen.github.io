@@ -89,7 +89,9 @@
   </div>
 
   <div class="rick slider" style="display: none;">
+    <div class=".example">
 
+    </div>
   </div>
 
   <div class="mom slider" style="display: none;">
@@ -109,6 +111,20 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <script type="text/javascript">
+    var ricks = {
+      "number": 6,
+      "clues": [
+        {
+          "imgAns": "",
+          "hint": "hint 1"
+        },
+        {
+          "imgAns": "",
+          "hint": "hint 2"
+        },
+      ]
+    };
+
     $(document).ready(function () {
       var password = 'supersecretpassword';
       $('.whos-there').click(function () {
@@ -145,14 +161,9 @@
       });
 
       function loadClues() {
-        // populate sliders
-        $.getJSON('clues.json', function (clues) {
-          var ricks = JSON.parse(clues).rick;
-          console.log(ricks);
-        })
-          .fail(function () {
-            console.log("error");
-          });
+        for (var clue in ricks.clues) {
+          $('.rick.slider').append($('.example').html(clue));
+        }
       }
 
       loadClues();
