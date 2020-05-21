@@ -100,6 +100,7 @@
       var password = 'supersecretpassword';
       $('.whos-there').click(function () {
         var whosThere = $(this).html();
+        $('#navMenu').collapse('hide')
 
         $('#instructions').fadeOut(2000, function () {
           $('#hello').html('Hello, ' + whosThere );
