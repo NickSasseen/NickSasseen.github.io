@@ -16,8 +16,8 @@
 
 <body>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu"
-      aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu" aria-controls="navMenu"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand text-white" href="#">
@@ -37,11 +37,16 @@
     </div>
   </nav>
 
-  <section class="w-100">
-    <div>
-      <img src="saw.png" alt="i want to play a game" />
+  <div id="instructions" class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4 text-uppercase">Which one are you?</h1>
+      <p class="lead">There's a menu up top to select who's playing.</p>
     </div>
-  </section>
+  </div>
+
+  <div id="sawImg" class="container-fluid text-center mt-5" style="display: none;">
+    <img src="saw.png" alt="i want to play a game" />
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -57,11 +62,13 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <script type="text/javascript">
-  $(document).ready(function() {
-    $('.whos-there').click(function() {
-      
+    $(document).ready(function () {
+      $('.whos-there').click(function () {
+        $('#instructions').fadeOut(2000, function() {
+          $('#sawImg').fadeIn(2000);
+        });
+      });
     });
-  });
   </script>
 </body>
 
