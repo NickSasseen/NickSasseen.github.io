@@ -105,6 +105,10 @@
       $('.whos-there').click(function () {
         var whosThere = $(this).html();
         $(this).removeClass('text-white').addClass('text-danger');
+        $('.whos-there').filter(function() {
+          return $(this).html() != whosThere;
+        }).removeClass('text-danger').addClass('text-white');
+
         $('#navMenu').collapse('hide')
 
         $('#instructions').fadeOut(2000, function () {
