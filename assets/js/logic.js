@@ -67,7 +67,7 @@ $(document).ready(function () {
         }
     }
 
-    loadClues();
+    //loadClues();
 
     $('.slider').slick({
         dots: true,
