@@ -51,7 +51,12 @@ $(document).ready(function () {
     $('#btnNextInstr').click(function() {
         $('#i-'+instrNum).fadeOut(1000, function() {
             instrNum++;
-            $('#i-'+instrNum).fadeIn(1000);
+            $('#i-'+instrNum).fadeIn(1000, function() {
+                if (instrNum == 3) {
+                    $('#btnNextInstr').hide();
+                    $('#btnStart').show();
+                }
+            });
         });
     });
 
