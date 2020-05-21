@@ -147,9 +147,8 @@
       function loadClues() {
         // populate sliders
         $.getJSON('clues.json', function (data, textStatus, jqxhr) {
-          console.log(data);
-          console.log(textStatus);
-          console.log(jqxhr);
+          var clues = JSON.parse(data);
+          console.log(clues);
         })
           .done(function () { console.log('done'); })
           .fail(function () {
