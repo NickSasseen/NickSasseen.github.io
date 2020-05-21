@@ -74,10 +74,6 @@
     <strong class="text-uppercase">Wrong!</strong> That's not the fucking password.
   </div>
   
-  <script>
-    $(".alert").alert();
-  </script>
-
   <div id="sawImg" class="container text-center mt-5 pb-5" style="display: none;">
     <img class="img-fluid" src="assets/img/saw.png" alt="i want to play a game" />
     <div class="text-evil">
@@ -131,7 +127,7 @@
         <div id="clue1" class="card bg-dark my-2">
           <div class="card-header" id="headingOne">
             <h2 class="mb-0">
-              <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 Package #1
               </button>
             </h2>
@@ -140,7 +136,7 @@
           <div id="collapseOne" class="collapse show text-white" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
               This one is a freebie. Your first package is in the garage.
-              <button class="btn btn-outline-success btn-block js-found">
+              <button class="btn btn-outline-success btn-block js-found mt-4" data-card="#clue1">
                 Found It
               </button>
             </div>

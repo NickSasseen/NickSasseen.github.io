@@ -74,7 +74,7 @@ $(document).ready(function () {
     });
 
     $('.js-found').click(function() {
-        var parent = $(this).parent('.card');
-        console.log($(parent).attr('id'));
+        var parent = $(this).data('card');
+        console.log(parent);
     });
 });
