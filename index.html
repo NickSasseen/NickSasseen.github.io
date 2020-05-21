@@ -12,6 +12,16 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    @font-face {
+      font-family: Murderer;
+      src: url('Youmurdererbb-pwoK.otf') format('opentype');
+    }
+    .text-evil {
+      font-family: Murderer;
+    }
+  </style>
 </head>
 
 <body>
@@ -59,6 +69,12 @@
 
   <div id="sawImg" class="container-fluid text-center mt-5" style="display: none;">
     <img src="saw.png" alt="i want to play a game" />
+    <div id="hello" class="text-evil text-danger">
+      
+    </div>
+    <div class="text-evil text-danger">
+      I Want to Play a Game.
+    </div>
   </div>
 
   <!-- Optional JavaScript -->
@@ -77,7 +93,10 @@
     $(document).ready(function () {
       var password = 'supersecretpassword';
       $('.whos-there').click(function () {
+        var whosThere = $(this).html();
+
         $('#instructions').fadeOut(2000, function () {
+          $('#hello').html('Hello, ' + whosThere );
           $('#sawImg').fadeIn(2000);
         });
       });
@@ -89,6 +108,7 @@
           console.log('you got the password');
         }
         else {
+          $('#txtPassword').val('');
           $('#dangerAlert').show('fast');
         }
       });
