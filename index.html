@@ -26,42 +26,27 @@
 
     .text-evil {
       font-family: Murderer;
+      color: red;
     }
   </style>
 </head>
 
 <body>
-  <nav class="navbar sticky-top w-100 navbar-expand-md navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu" aria-controls="navMenu"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand text-white" href="#">
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand text-white">
       <i class="fa fa-anchor" aria-hidden="true"></i>
       Treasure Hunt
     </a>
-
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav text-white mr-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link text-white whos-there" href="#">Mom</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white whos-there" href="#">Rick</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input id="txtPassword" class="form-control mr-sm-2 col-12 mb-2" type="password"
-          placeholder="Enter the password for the answers" aria-label="Enter the password for the answers">
-        <button id="btnPassword" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Enter</button>
-      </form>
-    </div>
+    <form class="form-inline my-2 my-lg-0">
+      <input id="txtPassword" class="form-control mr-sm-2 col-12 mb-2" type="password"
+        placeholder="Enter the password for the answers" aria-label="Enter the password for the answers">
+      <button id="btnPassword" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Enter</button>
+    </form>
   </nav>
 
-  <div id="instructions" class="jumbotron jumbotron-fluid">
+  <div id="instructions" class="text-center text-evil mt-5">
     <div class="container">
-      <h1 class="display-4 text-uppercase">Who are you?</h1>
-      <p class="lead">There's a menu up top to select who's playing.</p>
+      <h1 class="display-1 text-uppercase">Who are you?</h1>
     </div>
   </div>
 
@@ -82,8 +67,8 @@
       I Want to Play a Game.
     </div>
     <div class="mt-5">
-      <button id="btnNext" class="btn btn-danger btn-lg">
-        Next
+      <button id="btnNext" class="btn btn-danger btn-lg text-evil" style="font-size: xx-large;">
+        Take me to the game
         <i class="fa fa-arrow-right ml-3" aria-hidden="true"></i>
       </button>
     </div>
