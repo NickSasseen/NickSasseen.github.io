@@ -160,6 +160,16 @@
         })
       });
 
+      $('#btnStart').click(function() {
+        var whosThere = ('.whos-there').hasClass('text-danger').html();
+        $('#gameInstructions').hide();
+        if (whosThere == 'Mom') {
+          $('.mom.slider').show();
+        } else {
+          $('.rick.slider').show();
+        }
+      });
+
       function loadClues() {
         for (var clue in ricks.clues) {
           $('.rick.slider').append($('.example').html(clue));
