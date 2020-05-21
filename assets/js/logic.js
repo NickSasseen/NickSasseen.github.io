@@ -39,9 +39,17 @@ $(document).ready(function () {
 
     $('#btnNext').click(function () {
         $('#sawImg').fadeOut(2000, function () {
-            $('#gameInstructions').fadeIn(2000);
+            $('#gameInstructions').fadeIn(2000, cycleInstructions);
         })
     });
+
+    function cycleInstructions() {
+        var instrNum = 2;
+
+        for (let num = 1; num <= instrNum; num++) {
+            $('#i-'+instrNum).fadeIn(1500).delay(10000).fadeOut(1000);
+        }
+    }
 
     $('#btnStart').click(function () {
         var whosThere = $('.whos-there').filter(function () {
