@@ -164,7 +164,7 @@
         var whosThere = $('.whos-there').filter(function() {
           return $(this).hasClass('text-danger');
         }).html();
-        
+
         $('#gameInstructions').hide();
         if (whosThere == 'Mom') {
           $('.mom.slider').show();
@@ -174,8 +174,9 @@
       });
 
       function loadClues() {
-        for (var clue in ricks.clues) {
-          $('.rick.slider').append($('.example').html(clue));
+        for (var hint in ricks.clues) {
+          console.log(hint);
+          $('.rick.slider').append('<div>' + hint + '</div>');
         }
       }
 
