@@ -14,6 +14,7 @@ var ricks = {
 
 $(document).ready(function () {
     var password = 'supersecretpassword';
+    var instrNum = 1;
     $('.whos-there').click(function () {
         var whosThere = $(this).html();
     
@@ -39,21 +40,21 @@ $(document).ready(function () {
 
     $('#btnNext').click(function () {
         $('#sawImg').fadeOut(2000, function () {
-            $('#gameInstructions').fadeIn(2000, cycleInstructions);
+            $('#gameInstructions').fadeIn(500, function() {
+                $('#i-'+instrNum).fadeIn(1500, function() {
+                    $('#btnNextInstr').show();
+                });
+            });
         })
     });
 
-    function cycleInstructions() {
-        var instrNum = 2;
+    $('#btnNextInstr').click(function() {
+        $('#i-'+instrNum).fadeOut(1000, function() {
+            instrNum++;
+            $('#i-'+instrNum).fadeIn(1000);
+        });
+    });
 
-        for (let num = 1; num <= instrNum; num++) {
-            $('#i-'+num).fadeIn(1500, function() {
-                $(this).delay(10000).fadeOut(1000);
-            });
-        }
-
-        $('#btnStart').fadeIn(1000);
-    }
 
     $('#btnStart').click(function () {
         var whosThere = $('.whos-there').filter(function () {
