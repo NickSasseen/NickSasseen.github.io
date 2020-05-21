@@ -1,0 +1,20 @@
+[{
+    "name": "rick",
+    "numPackages": 6, 
+    "packages": [
+        {
+            "imgAnswer": "",
+            "clue": ""
+        }
+    ]
+},
+{
+    "name": "mom",
+    "numPackages": 13, 
+    "packages": [
+        {
+            "imgAnswer": "",
+            "clue": ""
+        }
+    ]
+}]

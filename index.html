@@ -83,10 +83,16 @@
     </div>
   </div>
 
-  <div id="gameInstructions" class="" style="display: none;">
-    <div>
-      Sup
-    </div>
+  <div id="gameInstructions" class="container text-center mt-5" style="display: none;">
+    <button id="btnStart" class="btn btn-danger btn-lg">Start The Hunt!</button>
+  </div>
+
+  <div class="rick slider">
+
+  </div>
+
+  <div class="mom slider">
+
   </div>
 
   <!-- Optional JavaScript -->
@@ -137,6 +143,10 @@
         })
       });
 
+      $('.slider').slick({
+        dots: true,
+        arrows: true,
+      })
     });
   </script>
 </body>
