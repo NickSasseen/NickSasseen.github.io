@@ -1,20 +1,31 @@
-[{
-    "name": "rick",
-    "numPackages": 6, 
-    "packages": [
-        {
-            "imgAnswer": "",
-            "clue": ""
-        }
-    ]
-},
 {
-    "name": "mom",
-    "numPackages": 13, 
-    "packages": [
-        {
-            "imgAnswer": "",
-            "clue": ""
-        }
-    ]
-}]
+    "rick": {
+        "numPackages": 6,
+        "clues": [
+            {
+                "imgAnswer": "",
+                "hint": "1"
+            }, 
+            {
+                "imgAnswer": "",
+                "hint": "2"
+            }, 
+            {
+                "imgAnswer": "",
+                "hint": "3"
+            }, 
+            {
+                "imgAnswer": "",
+                "hint": "4"
+            }, 
+            {
+                "imgAnswer": "",
+                "hint": "5"
+            }, 
+            {
+                "imgAnswer": "",
+                "hint": "6"
+            }
+        ]
+    }
+}

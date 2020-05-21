@@ -146,16 +146,12 @@
 
       function loadClues() {
         // populate sliders
-        $.getJSON('clues.json', function (data, textStatus, jqxhr) {
-          var clues = JSON.parse(data);
-          console.log(clues);
+        $.getJSON('clues.json', function (clues) {
+          var ricks = clues.rick;
+          console.log(ricks);
         })
-          .done(function () { console.log('done'); })
           .fail(function () {
             console.log("error");
-          })
-          .always(function () {
-            console.log("complete");
           });
       }
 
