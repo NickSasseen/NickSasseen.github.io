@@ -144,9 +144,8 @@
       });
 
       // populate sliders
-      var data = fetch('./clues.json')
-      .then(results => results.json()).then(alert);
-
+      var data = fetch('./clues.json').then(results => results.json());
+      console.log(data);
       $('.slider').slick({
         dots: true,
         arrows: true,
