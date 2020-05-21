@@ -147,7 +147,7 @@
       function loadClues() {
         // populate sliders
         $.getJSON('clues.json', function (clues) {
-          var ricks = clues.rick;
+          var ricks = JSON.parse(clues).rick;
           console.log(ricks);
         })
           .fail(function () {
