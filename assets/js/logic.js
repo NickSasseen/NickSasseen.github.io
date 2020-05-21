@@ -47,7 +47,9 @@ $(document).ready(function () {
         var instrNum = 2;
 
         for (let num = 1; num <= instrNum; num++) {
-            $('#i-'+num).fadeIn(1500).delay(10000).fadeOut(1000);
+            $('#i-'+num).fadeIn(1500, function() {
+                $(this).delay(10000).fadeOut(1000);
+            });
         }
 
         $('#btnStart').fadeIn(1000);
