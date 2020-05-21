@@ -18,10 +18,11 @@
     html {
       height: 100%;
     }
+
     body {
       background-color: black;
     }
-    
+
     @font-face {
       font-family: Murderer;
       src: url('assets/fonts/Youmurdererbb-pwoK.otf') format('opentype');
@@ -40,12 +41,13 @@
       <i class="fa fa-anchor" aria-hidden="true"></i>
       Treasure Hunt
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
+      aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarMenu">
       <form class="form-inline my-2 my-lg-0">
-        <input id="txtPassword" class="form-control mr-sm-2 col-12 mb-2" type="password"
+        <input id="txtPassword" class="form-control mr-sm-2 col-12 col-lg-3  mb-2" type="password"
           placeholder="Enter the password for the answers" aria-label="Enter the password for the answers">
         <button id="btnPassword" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Enter</button>
       </form>
@@ -56,8 +58,10 @@
     <div class="container">
       <h1 class="display-1 text-uppercase">Who are you?</h1>
       <div class="d-flex justify-content-around">
-        <button class="btn btn-outline-danger btn-lg text-evil whos-there px-5" style="font-size: xx-large;">Mom</button>
-        <button class="btn btn-outline-danger btn-lg text-evil whos-there px-5" style="font-size: xx-large;">Rick</button>
+        <button class="btn btn-outline-danger btn-lg text-evil whos-there px-5"
+          style="font-size: xx-large;">Mom</button>
+        <button class="btn btn-outline-danger btn-lg text-evil whos-there px-5"
+          style="font-size: xx-large;">Rick</button>
       </div>
     </div>
   </div>
@@ -85,30 +89,32 @@
   </div>
 
   <div id="gameInstructions" class="container text-center mt-5" style="display: none;">
-    <button id="btnStart" class="btn btn-outline-danger btn-lg text-evil" style="font-size: xx-large;">Start The Hunt!</button>
+    <button id="btnStart" class="btn btn-outline-danger btn-lg text-evil" style="font-size: xx-large;">Start The
+      Hunt!</button>
   </div>
+  <div class="container">
+    <div class="rick slider mt-5" style="display: none;">
+      <div class="text-white text-center">
+        <p>This is a test hint</p>
+      </div>
+      <div class="text-white text-center">
+        <p>This is a test hint 2</p>
+      </div>
+      <div class="text-white text-center">
+        <p>This is a test hint 3</p>
+      </div>
+    </div>
 
-  <div class="rick slider container mt-5" style="display: none;">
-    <div class="text-white text-center">
-      <p>This is a test hint</p>
-    </div>
-    <div class="text-white text-center">
-      <p>This is a test hint 2</p>
-    </div>
-    <div class="text-white text-center">
-      <p>This is a test hint 3</p>
-    </div>
-  </div>
-
-  <div class="mom slider container mt-5" style="display: none;">
-    <div class="text-white text-center">
-      <p>This is a test hint</p>
-    </div>
-    <div class="text-white text-center">
-      <p>This is a test hint 2</p>
-    </div>
-    <div class="text-white text-center">
-      <p>This is a test hint 3</p>
+    <div class="mom slider mt-5" style="display: none;">
+      <div class="text-white text-center">
+        <p>This is a test hint</p>
+      </div>
+      <div class="text-white text-center">
+        <p>This is a test hint 2</p>
+      </div>
+      <div class="text-white text-center">
+        <p>This is a test hint 3</p>
+      </div>
     </div>
   </div>
 
