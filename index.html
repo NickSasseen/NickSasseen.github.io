@@ -39,7 +39,7 @@
 
   <div id="instructions" class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4 text-uppercase">Which one are you?</h1>
+      <h1 class="display-4 text-uppercase">Who are you?</h1>
       <p class="lead">There's a menu up top to select who's playing.</p>
     </div>
   </div>
@@ -64,9 +64,13 @@
   <script type="text/javascript">
     $(document).ready(function () {
       $('.whos-there').click(function () {
-        $('#instructions').fadeOut(2000, function() {
-          $('#sawImg').fadeIn(2000);
+        console.log('clicked',$(this).html());
+
+        jQuery('#instructions').fadeOut(2000, function() {
+
+          jQuery('#sawImg').fadeIn(2000);
         });
+
       });
     });
   </script>
