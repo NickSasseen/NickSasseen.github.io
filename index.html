@@ -172,9 +172,9 @@
       });
 
       function loadClues() {
-        for (var hint in ricks.clues) {
-          console.log(hint);
-          $('.rick.slider').append('<div>' + hint + '</div>');
+        for (var clue in ricks.clues) {
+          console.log(clue.hint);
+          $('.rick.slider').append('<div>' + clue.hint + '</div>');
         }
       }
 
