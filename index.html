@@ -10,7 +10,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.css">
   <link rel="stylesheet" type="text/css" href="assets/vendor/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="assets/vendor/slick/slick-theme.css" />
 
@@ -38,7 +38,7 @@
 <body>
   <nav class="navbar navbar-dark">
     <a class="navbar-brand text-white">
-      <i class="fa fa-anchor" aria-hidden="true"></i>
+      <i class="fas fa-box-open"></i>
       Package Hunt
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
@@ -73,6 +73,13 @@
     </button>
     <strong class="text-uppercase">Wrong!</strong> That's not the fucking password.
   </div>
+
+  <div id="done" class="alert container text-center alert-success" role="alert" style="display: none;">
+    <h4 class="alert-heading">Your're Done!!</h4>
+    <hr>
+    <p class="mb-0">Thanks for playing</p>
+    <img class="img-fluid mt-5" src="assets/img/all-packages.jpg" alt="Look at all these">
+  </div>
   
   <div id="sawImg" class="container text-center mt-5 pb-5" style="display: none;">
     <img class="img-fluid" src="assets/img/saw.png" alt="i want to play a game" />
@@ -88,7 +95,7 @@
     </div>
   </div>
 
-  <div id="gameInstructions" class="container text-center mt-5" style="display: none;">
+  <div id="gameInstructions" class="container text-center mt-5 pb-5" style="display: none;">
     <div class="text-evil h1">
       <p id="i-1" style="display: none;">
         Since you've been gone, FedEx, UPS, and Amazon have been hard at work making sure that all of your
@@ -102,7 +109,10 @@
         Here are some clues to help you find your packages.
         <br />
         <br />
-        Let the games begin!! <i class="fa fa-smile-o"></i>
+        Let the games begin!! <i class="fas fa-smile-wink"></i>
+        <br />
+        <br />
+        None of the packages are in my room or downstairs!!
         <br />
         <br />
         If you can't find them all, ask me for the password. The password will reveal all the answers.
@@ -119,6 +129,10 @@
   </div>
 
   <div class="container">
+    <div class="js-count text-white text-center" style="display: none;">
+      <span id="complete"></span> / <span id="total"> </span> Packages Found
+    </div>
+
     <div class="rick slider mt-5" style="display: none;">
       
     </div>
@@ -128,7 +142,7 @@
         <div id="clue1" class="card bg-dark my-2">
           <div class="card-header" id="headingOne">
             <h2 class="mb-0">
-              <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <button class="btn btn-block text-left text-danger" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 Package #1
               </button>
             </h2>
@@ -138,6 +152,26 @@
             <div class="card-body">
               This one is a freebie. Your first package is in the garage.
               <button class="btn btn-outline-success btn-block js-found mt-4" data-card="#clue1">
+                Found It
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="clue2" class="card bg-dark my-2">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-block text-left text-danger" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Package #2
+              </button>
+            </h2>
+          </div>
+      
+          <div id="collapseTwo" class="collapse text-white" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              This one should be easy...<br />During football season, my favorite spot is sitting on the couch next to the fire with my
+              feet up.
+              <button class="btn btn-outline-success btn-block js-found mt-4" data-card="#clue2">
                 Found It
               </button>
             </div>
