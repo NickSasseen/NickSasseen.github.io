@@ -76,7 +76,7 @@
       I Want to Play a Game.
     </div>
     <div class="mt-5">
-      <button class="btn btn-danger btn-lg">
+      <button id="btnNext" class="btn btn-danger btn-lg">
         Next
         <i class="fa fa-arrow-right ml-3" aria-hidden="true"></i>
       </button>
@@ -84,7 +84,9 @@
   </div>
 
   <div id="gameInstructions" class="">
-
+    <div>
+      Sup
+    </div>
   </div>
 
   <!-- Optional JavaScript -->
@@ -129,6 +131,11 @@
         }
       });
 
+      $('#btnNext').click(function() {
+        $('#sawImg').fadeOut(2000, function() {
+          $('#gameInstructions').fadeIn(2000);
+        })
+      });
 
     });
   </script>
