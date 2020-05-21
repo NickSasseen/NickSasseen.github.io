@@ -161,7 +161,10 @@
       });
 
       $('#btnStart').click(function() {
-        var whosThere = $('.whos-there').hasClass('text-danger').html();
+        var whosThere = $('.whos-there').filter(function() {
+          return $(this).hasClass('text-danger');
+        }).html();
+        
         $('#gameInstructions').hide();
         if (whosThere == 'Mom') {
           $('.mom.slider').show();
