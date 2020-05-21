@@ -83,6 +83,10 @@
     </div>
   </div>
 
+  <div id="gameInstructions" class="">
+
+  </div>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -100,6 +104,7 @@
       var password = 'supersecretpassword';
       $('.whos-there').click(function () {
         var whosThere = $(this).html();
+        $(this).removeClass('text-white').addClass('text-danger');
         $('#navMenu').collapse('hide')
 
         $('#instructions').fadeOut(2000, function () {
@@ -119,6 +124,8 @@
           $('#dangerAlert').show('fast');
         }
       });
+
+
     });
   </script>
 </body>
