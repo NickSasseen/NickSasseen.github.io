@@ -172,7 +172,7 @@
       });
 
       function loadClues() {
-        for (var clue in ricks.clues) {
+        for (var clue of ricks.clues) {
           console.log(clue.hint);
           $('.rick.slider').append('<div>' + clue.hint + '</div>');
         }
