@@ -75,6 +75,6 @@ $(document).ready(function () {
 
     $('.js-found').click(function() {
         var parent = $(this).data('card');
-        $(parent).collapse('dispose');
+        $(parent).remove();
     });
 });
