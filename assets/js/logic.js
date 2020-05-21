@@ -73,17 +73,8 @@ $(document).ready(function () {
         }
     });
 
-    function loadClues() {
-        for (var clue of ricks.clues) {
-            console.log(clue.hint);
-            $('.rick.slider').append('<div class="">' + clue.hint + '</div>');
-        }
-    }
-
-    //loadClues();
-
-    $('.slider').slick({
-        dots: true,
-        arrows: true,
-    })
+    $('.js-found').click(function() {
+        var parent = $(this).parent('.card');
+        console.log($(parent).attr('id'));
+    });
 });
