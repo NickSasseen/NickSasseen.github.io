@@ -15,8 +15,10 @@ var ricks = {
 $(document).ready(function () {
     var password = 'supersecretpassword';
     var instrNum = 1;
+    var whosThere = '';
+
     $('.whos-there').click(function () {
-        var whosThere = $(this).html();
+        whosThere = $(this).html();
     
         $('#navbarMenu').collapse('hide')
 
@@ -62,9 +64,6 @@ $(document).ready(function () {
 
 
     $('#btnStart').click(function () {
-        var whosThere = $('.whos-there').filter(function () {
-            return $(this).hasClass('text-danger');
-        }).html();
 
         $('#gameInstructions').hide();
         if (whosThere == 'Mom') {
