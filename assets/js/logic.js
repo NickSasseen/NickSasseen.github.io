@@ -122,7 +122,8 @@ $(document).ready(function () {
             display.text(minutes + ":" + seconds);
 
             if (--timer < 0) {
-                // out of time
+                $('.container > *').hide();
+                $('#lose').show();
             }
         }, 1000);
     }
