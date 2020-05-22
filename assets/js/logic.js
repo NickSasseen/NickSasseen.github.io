@@ -13,7 +13,7 @@ var ricks = {
 };
 
 $(document).ready(function () {
-    var password = 'supersecretpassword';
+    var password = 'x';
     var instrNum = 1;
     var whosThere = '';
 
@@ -32,7 +32,11 @@ $(document).ready(function () {
         e.preventDefault();
 
         if ($('#txtPassword').val() == password) {
-            console.log('you got the password');
+            if (whosThere == 'Mom') {
+                $('.mom-pics-answers').show();
+            } else {
+                $('.rick-pic-answers').show();
+            }
         }
         else {
             $('#txtPassword').val('');
@@ -70,29 +74,36 @@ $(document).ready(function () {
         if (whosThere == 'Mom') {
             $('.mom').show();
             total = $('.mom').find('.card:visible').length;
+            $('.mom-pics-answers').hide();
         } else {
             $('.rick').show();
             total = $('.rick').find('.card:visible').length;
+            $('.rick-pic-answers').hide();
         }
 
         $('.js-count').show();
-        $('#complete').html(0);
-        $('#total').html(total);
+
+        var tenMinutes = 60 * 10, display = $('#timer');
+        startTimer(tenMinutes, display);
     });
 
     $('.js-found').click(function() {
         var parent = $(this).data('card');
         $(parent).remove();
         var done = false;
+        var whosPic = '';
 
         if (whosThere == 'Mom') {
             done = $('.mom').find('.card:visible').length == 0;
+            whosPic = '.pic-mom';
         } else {
             done = $('.rick').find('.card:visible').length == 0;
+            whosPic = '.pic-rick';
         }
 
         if (done) {
             $('#done').show();
+            $(whosPic).show();
             $('.js-count').hide();
         } else {
             $('#complete').html(function() {
@@ -107,4 +118,21 @@ $(document).ready(function () {
             });
         }
     });
+
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+    
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+    
+            display.text(minutes + ":" + seconds);
+    
+            if (--timer < 0) {
+                // out of time
+            }
+        }, 1000);
+    }
 });
