@@ -1,25 +1,12 @@
-var ricks = {
-    "number": 6,
-    "clues": [
-        {
-            "imgAns": "",
-            "hint": "hint 1"
-        },
-        {
-            "imgAns": "",
-            "hint": "hint 2"
-        },
-    ]
-};
 
 $(document).ready(function () {
-    var password = 'x';
+    var password = 'nick';
     var instrNum = 1;
     var whosThere = '';
 
     $('.whos-there').click(function () {
         whosThere = $(this).html();
-    
+
         $('#navbarMenu').collapse('hide')
 
         $('#instructions').fadeOut(2000, function () {
@@ -33,10 +20,14 @@ $(document).ready(function () {
 
         if ($('#txtPassword').val() == password) {
             if (whosThere == 'Mom') {
-                $('.mom-pics-answers').show();
+                $('.mom-pic-answers').show();
+                $('.mom').find('.collapse').collapse('show');
             } else {
                 $('.rick-pic-answers').show();
+                $('.rick').find('.collapse').collapse('show');
             }
+
+            $('.navbar').find('.collapse').collapse('hide');
         }
         else {
             $('#txtPassword').val('');
@@ -46,18 +37,18 @@ $(document).ready(function () {
 
     $('#btnNext').click(function () {
         $('#sawImg').fadeOut(2000, function () {
-            $('#gameInstructions').fadeIn(500, function() {
-                $('#i-'+instrNum).fadeIn(1500, function() {
+            $('#gameInstructions').fadeIn(500, function () {
+                $('#i-' + instrNum).fadeIn(1500, function () {
                     $('#btnNextInstr').show();
                 });
             });
         })
     });
 
-    $('#btnNextInstr').click(function() {
-        $('#i-'+instrNum).fadeOut(1000, function() {
+    $('#btnNextInstr').click(function () {
+        $('#i-' + instrNum).fadeOut(1000, function () {
             instrNum++;
-            $('#i-'+instrNum).fadeIn(1000, function() {
+            $('#i-' + instrNum).fadeIn(1000, function () {
                 if (instrNum == 3) {
                     $('#btnNextInstr').hide();
                     $('#btnStart').show();
@@ -74,7 +65,7 @@ $(document).ready(function () {
         if (whosThere == 'Mom') {
             $('.mom').show();
             total = $('.mom').find('.card:visible').length;
-            $('.mom-pics-answers').hide();
+            $('.mom-pic-answers').hide();
         } else {
             $('.rick').show();
             total = $('.rick').find('.card:visible').length;
@@ -87,7 +78,7 @@ $(document).ready(function () {
         startTimer(tenMinutes, display);
     });
 
-    $('.js-found').click(function() {
+    $('.js-found').click(function () {
         var parent = $(this).data('card');
         $(parent).remove();
         var done = false;
@@ -106,7 +97,7 @@ $(document).ready(function () {
             $(whosPic).show();
             $('.js-count').hide();
         } else {
-            $('#complete').html(function() {
+            $('#complete').html(function () {
                 var total = $('#total').html();
                 var complete = 0;
 
@@ -124,12 +115,12 @@ $(document).ready(function () {
         setInterval(function () {
             minutes = parseInt(timer / 60, 10);
             seconds = parseInt(timer % 60, 10);
-    
+
             minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
-    
+
             display.text(minutes + ":" + seconds);
-    
+
             if (--timer < 0) {
                 // out of time
             }
